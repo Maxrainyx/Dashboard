@@ -15,12 +15,12 @@ there will be weekly mail delivery on Monday 10 A.M. with mails for the previous
 
 Settings are enabled:
   - to send messages to console instead of actual email
-   if DEBUG:
+   <p>if DEBUG:</p>
    <p>    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'</p>
   - to debug the project
-   DEBUG = True
-
-Dashboard requares:
+   <p>DEBUG = True</p>
+<hr>
+<p>Dashboard requares:</p>
   <p>django</p>
   <p>django-allauth</p>
   <p>django-ckeditor</p>

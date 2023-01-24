@@ -14,16 +14,16 @@ there you can filter them by the title, approve or delete them,
 there will be weekly mail delivery on Monday 10 A.M. with mails for the previous week to all sighned in users,
 
 Settings are enabled:
-  # to send messages to console instead of actual email
+  - to send messages to console instead of actual email
    if DEBUG:
-       EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-  # to debug the project
+   <p>    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'</p>
+  - to debug the project
    DEBUG = True
 
 Dashboard requares:
   <p>django</p>
-  django-allauth
-  django-ckeditor
-  django-filter
-  celery
-  redis
+  <p>django-allauth</p>
+  <p>django-ckeditor</p>
+  <p>django-filter</p>
+  <p>celery</p>
+  <p>redis</p>

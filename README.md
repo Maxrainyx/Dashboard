@@ -12,7 +12,7 @@ if you're the post author your comments will be immediately shown without your a
 you can see all the unapproved comments on your profile page,
 there you can filter them by the title, approve or delete them,
 there will be weekly mail delivery on Monday 10 A.M. with mails for the previous week to all sighned in users,
-
+<hr>
 Settings are enabled:
   - to send messages to console instead of actual email
    <p>if DEBUG:</p>

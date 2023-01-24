@@ -20,7 +20,7 @@
   - to debug the project
    <p>DEBUG = True</p>
 <hr>
-<p>Dashboard requares:</p>
+<h3>Dashboard requares:</h3>
   <p>django</p>
   <p>django-allauth</p>
   <p>django-ckeditor</p>

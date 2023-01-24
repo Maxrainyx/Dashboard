@@ -1,0 +1,136 @@
+{% extends 'flatpages/index.html' %}
+{% block content %}
+
+<style>
+input[type=text], select {
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  width:30%;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #598886;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  width:10%;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.container-com {
+  border: 2px solid #C6CECE;
+  background-color: #C2CACA;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+   height:255px;
+}
+
+.container-cat {
+  border: 2px solid #C6CECE;
+  background-color: #598886;
+  border-radius: 12px;
+  text-align: center;
+  padding: 10px;
+  margin: 10px 0;
+  width: 50%;
+  float: left;
+
+  .button {
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    float: right;
+
+}
+
+
+</style>
+
+
+<h2>Hi, {{ user }}! Welcome!</h2>
+
+<hr>
+
+
+    <h3> Approval section </h3>
+<form action="" method="get">
+       {{ filterset.form.as_p }}
+       <input type="submit" value="Filter" />
+</form>
+
+
+
+
+<div class="container" style="display: inline-block;">
+    {% for comment in coms %}
+
+
+            {% if comment.author_id != user.id %}
+
+
+            {% if not comment.approved %}
+
+                    <div class="container-cat"  style="background-color: #C2CACA; margin: 10px 0; border: 2px solid #738AA7;">
+                        <div class="container">
+
+                            <a href="/news/{{ comment.post_id }}" style=" color: #598886"><h5> {{ comment.post.title }}</h5></a>
+                        </div>
+
+                        <div class="container">
+                            <div class="container-cat" style="float:left; background-color: #738AA7; border-radius: 5px;">
+                                <h5> {{ comment.author }}</h5>
+                            </div>
+
+                            <div class="container-cat" style=" background-color: #738AA7; border-radius: 5px;">
+                                <h5>{{ comment.created|date:'M d Y' }}</h5>
+                            </div>
+
+                            <div class="container-com" style=" border: none;">
+                                <p> {{ comment.text }}</p>
+                            </div>
+                        </div>
+
+                        <div class="container">
+                            <form action="{% url 'comment_approve' comment.post.id %}" method="POST">{% csrf_token %}
+                                <button type="submit", name="com_approve" value="{{ comment.id }}", class="button"
+                                        style="float:right; border-radius: 12px; background-color: #598886; border: none; color: white; height: 50px; width: 150px;"
+                                > Approve </button>
+                            </form>
+
+
+                            <form action="{% url 'comment_delete' comment.post.id %}" method="POST">{% csrf_token %}
+                                <button type="submit", name="com_delete" value="{{ comment.id }}", class="button"
+                                        style="float:left; border-radius: 12px; background-color: #7B1212; border: none; color: white; height: 50px; width: 150px;" ;
+                                > Delete </button>
+                            </form>
+                        </div>
+                    </div>
+
+            {% endif %}
+        {% endif %}
+
+    {% empty %}
+
+
+
+    {% endfor %}
+</div>
+<hr>
+
+
+{% endblock %}

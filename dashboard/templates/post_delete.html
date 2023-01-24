@@ -1,0 +1,33 @@
+{% extends 'flatpages/index.html' %}
+
+{% block content %}
+<style>
+input[type=submit] {
+  background-color: #7B1212;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+body {
+  color: #4D0000;
+}
+</style>
+
+{% if user.id == post.author.id %}
+<h1>Deletion section</h1>
+<hr>
+<form action="" method="post">
+    {% csrf_token %}
+    <p>Are you sure you want to delete "{{ object.title }}"?</p>
+    <input type="submit" value="Delete" />
+</form>
+{% else %}
+
+<h1> Sorry, you're not the author </h1>
+
+{% endif %}
+{% endblock content %}

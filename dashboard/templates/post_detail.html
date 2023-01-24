@@ -1,0 +1,172 @@
+{% extends 'flatpages/index.html' %}
+
+
+{% block content %}
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  border-radius: 5px;
+}
+
+.column {
+  flex: 60%;
+  padding: 30px;
+  border-radius: 5px;
+}
+.column2 {
+  flex: 40%;
+  padding: 30px;
+  border-radius: 5px;
+}
+.container-com {
+  border: 2px solid #C6CECE;
+  background-color: #C2CACA;
+  border-radius: 5px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.container-cat {
+  border: 2px solid #C6CECE;
+  background-color: #598886;
+  border-radius: 12px;
+  text-align: center;
+  padding: 10px;
+  margin: 10px 0;
+  width: 50%;
+  float: right;
+
+}
+.container-post {
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.button {
+    background-color: #A6B4B4;
+    border: none;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 12px;
+    float: right;
+
+}
+
+.button-new:hover {
+    background-color: #598886;
+}
+
+.button-update:hover {
+  background-color: #94945C;
+  color: white;
+}
+
+.button-delete {
+    float: left;
+}
+
+
+
+.button-delete:hover {
+  background-color: #7B1212;
+  color: white;
+}
+</style>
+
+
+{% csrf_token %}
+
+
+<div class="row">
+
+  <div class="column" style="background-color:#C2CCCB;">
+
+      <h2>{{ post_detail.title }}</h2>
+
+      <div class="container-cat" style="background-color: #738AA7;">
+          <h5> Category - <i>{{ post_detail.category }} </i> </h5>
+      </div>
+      <div class="container-cat" style="float:left; background-color: #738AA7;">
+          <h5>Author - <i>{{ post_detail.author.username }}, {{ post_detail.created|date:'M d Y' }}</i> </h5>
+      </div>
+
+        <div class="container-post">
+            <p>{{ post_detail.text|safe }}</p>
+        </div>
+
+
+      {% if user.id == post_detail.author.id %}
+      <form action="{{ post_detail.id }}/update/" method="">
+          <button class="button button-update">  Edit  </button>
+      </form>
+      <form action="{{ post_detail.id }}/delete/" method="">
+          <button class="button button-delete">  Delete  </button>
+      </form>
+      {% endif %}
+
+  </div>
+
+  <div class="column2" style="background-color:#A6B4B4;">
+
+      {% if comments %}
+
+
+
+          <h2> Comments </h2>
+          {% for comment in comments.text %}
+                {% if comment.approved %}
+
+
+                    <div class="container-cat" style="float:left; background-color: #598886; border-radius: 5px;">
+                        <h5> <i>{{ comment.author__username }}</i></h5>
+                    </div>
+
+                    <div class="container-cat" style=" background-color: #598886; border-radius: 5px;">
+                        <h5>{{ comment.created|date:'M d Y' }}</i> </h5>
+                    </div>
+
+                    <div class="container-com">
+                        <p> {{ comment.text }} </p>
+                        <span class="time-left"> {{ comments.created }}</span>
+                    </div>
+
+                {% else %}
+
+                <div class="container-com">
+                    <p> This comment from {{ comment.author__username }} still not approved by {{ post_detail.author.username }} </p>
+                    <span class="time-left"> {{ comments.created }}</span>
+                </div>
+
+                {% endif %}
+
+          {% endfor %}
+
+      {% else %}
+          <div class="container-com">
+              <h2> No comments </h2>
+          </div>
+      {% endif %}
+
+          <form action="{{ post_detail.id }}/comment/" method="" >
+              <button class="button button-new" style="border: 2px solid #598886; ">  New comment  </button>
+          </form>
+
+
+
+  </div>
+
+</div>
+
+
+
+{% endblock content %}

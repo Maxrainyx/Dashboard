@@ -9,10 +9,10 @@
 <p>edit or delete posts if you're the author of it,</p>
 <p>create comments for the post, they have to be approved by its author to be availible,</p>
 <p>there will be an email-notification for this action,</p>
-<p>if you're the post author your comments will be immediately shown without your approval,</a>
-<p>you can see all the unapproved comments on your profile page,</p>
-<p>there you can filter them by the title, approve or delete them,</p>
-<p>there will be weekly mail delivery on Monday 10 A.M. with all post for the previous week to all signed in users</p>
+<p>if you're the post author your comments will be immediately shown without your own approval,</a>
+<p>you can see all the unapproved comments from other users to your posts on your profile page. </p>
+<p>there you can filter them by the title, approve or delete them, also you can see the title of these posts and go to the full version,</p>
+<p>there will be weekly mail delivery on Monday 10 A.M. with all posts for the previous week to all signed in users</p>
 <hr>
 <h3>Settings included:</h3>
   - to send messages to console instead of actual email
@@ -28,3 +28,9 @@
   <p>django-filter</p>
   <p>celery</p>
   <p>redis</p>
+  <hr>
+<h3>Problems TODO: </h3>
+<p>move css from templates</p>
+<p>edit sigh in and out pages</p>
+<p>split emails to one on creation and another on editing (approval) of the comment</p>
+<p>get rid of emails from auto approval of your comments to your own posts (?)</p>

@@ -13,7 +13,7 @@
 <p>there you can filter them by the title, approve or delete them,</p>
 <p>there will be weekly mail delivery on Monday 10 A.M. with all post for the previous week to all signed in users</p>
 <hr>
-Settings are enabled:
+<h3>Settings are enabled:</h3>
   - to send messages to console instead of actual email
    <p>if DEBUG:</p>
    <p>    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'</p>

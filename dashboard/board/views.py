@@ -1,11 +1,10 @@
-from django.contrib.auth.models import User
 from django.shortcuts import get_object_or_404
 from django.http import HttpResponseRedirect
 
 from django.views.generic import (
-    ListView, DetailView, CreateView, UpdateView, DeleteView, TemplateView
+    ListView, DetailView, CreateView, UpdateView, DeleteView,
 )
-from django.contrib.auth.mixins import PermissionRequiredMixin, LoginRequiredMixin
+from django.contrib.auth.mixins import LoginRequiredMixin
 
 from .filters import CommentFilter
 from .models import Post, Comment
@@ -16,6 +15,7 @@ from .forms import PostForm, CommentForm
 
 
 def comment_approve(request, pk):
+    """ View to APPROVE comment on the profile page """
     comment = get_object_or_404(Comment, id=request.POST.get('com_approve'))
     comment.approved = True
     comment.save()
@@ -23,6 +23,7 @@ def comment_approve(request, pk):
 
 
 def comment_delete(request, pk):
+    """ View to DELETE comment on the profile page """
     comment = get_object_or_404(Comment, id=request.POST.get('com_delete'))
     comment.delete()
     return HttpResponseRedirect(reverse('profile'))
@@ -78,23 +79,22 @@ class PostCreate(LoginRequiredMixin, CreateView):
         return super().form_valid(form)
 
 
-class PostUpdate(PermissionRequiredMixin, UpdateView):
+class PostUpdate(LoginRequiredMixin, UpdateView):
     """ Generic View to UPDATE the Post """
-    permission_required = ('board.change_post',)  # Permissions to update the post
     form_class = PostForm
     model = Post
     template_name = 'post_update.html'
 
 
-class PostDelete(PermissionRequiredMixin, DeleteView):
+class PostDelete(LoginRequiredMixin, DeleteView):
     """ Generic View to DELETE the Post """
-    permission_required = ('board.delete_post',)
     model = Post
     template_name = 'post_delete.html'
     success_url = reverse_lazy('post_list')
 
 
 class UserView(LoginRequiredMixin, ListView):
+    """ Generic View to see users profile page """
     template_name = 'profile.html'
     model = Comment
     context_object_name = 'coms'
@@ -126,4 +126,3 @@ class CommentCreate(LoginRequiredMixin, CreateView):
         if comment.post.author_id == self.request.user.id:
             comment.approved = True
         return super().form_valid(form)
-

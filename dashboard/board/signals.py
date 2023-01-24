@@ -8,6 +8,7 @@ from dashboard.settings import DEFAULT_FROM_EMAIL
 
 app = Celery('dashboard')
 
+
 @receiver(post_save, sender=Comment)
 def notify_on_comment(sender, instance, **kwargs):
     """ Notification for a new comment to its owner Post """

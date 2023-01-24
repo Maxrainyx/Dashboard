@@ -4,6 +4,7 @@
 
 <h3>You can:</h3>
 <p>sign and log in,</p>
+<p>to proceed signing in you will receive confirmation email,</p>
 <p>create post( + attach images and embed videos) if you're logged in,</p>
 <p>edit or delete posts if you're the author of it,</p>
 <p>create comments for the post, they have to be approved by its author to be availible,</p>

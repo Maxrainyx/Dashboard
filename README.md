@@ -21,7 +21,7 @@ Settings are enabled:
    DEBUG = True
 
 Dashboard requares:
-  django
+  <p>django</p>
   django-allauth
   django-ckeditor
   django-filter

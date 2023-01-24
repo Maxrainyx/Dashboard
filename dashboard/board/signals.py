@@ -1,3 +1,4 @@
+from celery import Celery
 from django.dispatch import receiver
 from .models import Post, Comment
 from django.db.models.signals import post_save
@@ -5,6 +6,7 @@ from django.core.mail import send_mail
 from celery.schedules import crontab
 from dashboard.settings import DEFAULT_FROM_EMAIL
 
+app = Celery('dashboard')
 
 @receiver(post_save, sender=Comment)
 def notify_on_comment(sender, instance, **kwargs):
@@ -16,7 +18,6 @@ def notify_on_comment(sender, instance, **kwargs):
     post_author_email = Post.objects.get(id=new_comment.post.id).author.email
 
     if new_comment:
-
         email_subject = f"There's a new comment to your post!"
         email_message = f'"{new_comment.post.title}"\n Подробнее: http://127.0.0.1:8000/news/{new_comment.post.id}'
 

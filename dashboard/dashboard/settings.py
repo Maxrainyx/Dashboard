@@ -69,11 +69,9 @@ AUTHENTICATION_BACKENDS = [
 EMAIL_HOST = 'smtp.yandex.ru'
 EMAIL_PORT = 465
 EMAIL_USE_SSL = True
-EMAIL_HOST_USER = 'dedmaxrainy'
-EMAIL_HOST_PASSWORD = 'isjjyfedgvwluhbs'
+EMAIL_HOST_USER = 'maxrainy'
+EMAIL_HOST_PASSWORD = ''
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER + '@yandex.ru'
-
-"""SERVER_EMAIL = 'dedmaxrainy@yandex.ru'"""
 
 SITE_ID = 1
 

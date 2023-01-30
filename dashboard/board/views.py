@@ -14,7 +14,7 @@ from django.utils import timezone
 from .forms import PostForm, CommentForm
 
 
-def comment_approve(request, pk):
+def comment_approve(request):
     """ View to APPROVE comment on the profile page """
     comment = get_object_or_404(Comment, id=request.POST.get('com_approve'))
     comment.approved = True
@@ -22,7 +22,7 @@ def comment_approve(request, pk):
     return HttpResponseRedirect(reverse('profile'))
 
 
-def comment_delete(request, pk):
+def comment_delete(request):
     """ View to DELETE comment on the profile page """
     comment = get_object_or_404(Comment, id=request.POST.get('com_delete'))
     comment.delete()
@@ -48,7 +48,6 @@ class PostDetail(DetailView):
     def get_context_data(self, **kwargs):
         """ Overwrite method to get comments on the page """
         context = super(PostDetail, self).get_context_data(**kwargs)
-        users = []
         comments = list(
             Comment.objects.filter(post_id=self.kwargs["pk"]).values(
                 'id',

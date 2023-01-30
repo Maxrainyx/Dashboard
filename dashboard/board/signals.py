@@ -11,20 +11,20 @@ app = Celery('dashboard')
 
 @receiver(post_save, sender=Comment)
 def notify_on_comment(sender, instance, **kwargs):
-    """ Notification for a new comment to its owner Post """
+    """ Notification for a new comment to its Post owner """
     #  find a new comment
     new_comment = Comment.objects.all().order_by('-created').first()
 
-    # find new comments author and then his email
+    # find new comments' author and then - his email
     post_author_email = Post.objects.get(id=new_comment.post.id).author.email
 
-    if new_comment:
+    if new_comment:  # actual e-mail sender
         email_subject = f"There's a new comment to your post!"
-        email_message = f'"{new_comment.post.title}"\n Подробнее: http://127.0.0.1:8000/news/{new_comment.post.id}'
+        email_message = f'"{new_comment.post.title}"\n Read full at: http://127.0.0.1:8000/news/{new_comment.post.id}'
 
         send_mail(subject=email_subject,
                   message=email_message,
-                  from_email=DEFAULT_FROM_EMAIL,
+                  from_email=DEFAULT_FROM_EMAIL,  # imported from .settings even if it shows "unresolved"
                   recipient_list=[post_author_email],
                   )
 

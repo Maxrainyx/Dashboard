@@ -58,13 +58,6 @@ DEBUG = True
   <li>redis</li>
   <li>requests</>
 </ul>
-
-> You can use command below
- 
-```
-pip3 install -r requirements.txt
-```
-
 <hr>
 
 <h2>

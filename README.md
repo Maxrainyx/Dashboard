@@ -67,8 +67,22 @@ pip3 install -r requirements.txt
 
 <hr>
 
-<h3>Problems TODO: </h3>
+<h2>
+  Для запуска:
+</h2>
+<p>
+  Откройте проект в IDE.
+  В терминале введите:
+</p>
+​
 
+```
+pip3 install -r requirements.txt
+```
+
+> установятся необходимые библиотеки из файла requirements.txt
+
+<h3>Problems TODO: </h3>
 <ul>
     <li>edit sigh in and out pages</li>
     <li>split emails to one on creation and another on editing (approval) of the comment</li>

@@ -15,12 +15,12 @@
 <p>there will be weekly mail delivery on Monday 10 A.M. with all posts for the previous week to all signed in users</p>
 <hr>
 <h3>Some screenshots:</h3>
->one
+> main page with all the posts
 <img width="800" alt="Снимок экрана 2023-05-04 в 22 23 15" src="https://user-images.githubusercontent.com/115626270/236312844-ebf7844c-4549-41e1-a553-5328ecb86d40.png">
->two
-<img width="800" alt="Снимок экрана 2023-05-04 в 22 23 32" src="https://user-images.githubusercontent.com/115626270/236312770-7f58fd03-966a-44ad-83df-4fd97aa43585.png">
->three
+> detailed posts with commentaries
 <img width="800" alt="Снимок экрана 2023-05-04 в 22 18 52" src="https://user-images.githubusercontent.com/115626270/236312901-d29b6988-937b-486e-87cd-e39a2d83e365.png">
+> profile page with approval section
+<img width="800" alt="Снимок экрана 2023-05-04 в 22 23 32" src="https://user-images.githubusercontent.com/115626270/236312770-7f58fd03-966a-44ad-83df-4fd97aa43585.png">
 
 <hr>
 <h3>Settings included:</h3>

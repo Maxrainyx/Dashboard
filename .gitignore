@@ -3,3 +3,4 @@ venv
 Magic-Dashboard/.idea
 .DS_Store
 .idea
+__pycache__

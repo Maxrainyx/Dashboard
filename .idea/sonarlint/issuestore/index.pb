@@ -1,20 +1,10 @@
 
-T
-$dashboard/templates/post_delete.html,d/0/d0420429506dcbdc815e3282618bd5b1c9a11f37
-H
-dashboard/board/views.py,4/2/424b2ebccf16bdc8375243d34aea6291285226d4
 G
 dashboard/board/TODO.py,7/c/7c9469514f7213207e9f515fac80753a9bbae896
 H
 dashboard/board/tests.py,d/0/d0df438ba54a3f13e6248e45648efef0f462e3f2
-H
-dashboard/board/forms.py,6/e/6ecf715df561b885a642e6a32fd2d19bd03d2de7
 J
 dashboard/board/filters.py,c/9/c943467ad6994aa5f189fc206f496fe7a4075224
-G
-dashboard/board/apps.py,0/e/0eb90c6c4d9f99f7c8478aa2e6e2681e3906a7a5
-H
-dashboard/board/admin.py,a/b/ab14f159bfcfcbf14db6782f7cabdee7513c8970
 K
 dashboard/board/__init__.py,0/c/0cc87a706e0474341040a817bd3d7c765e080772
 K
@@ -25,37 +15,29 @@ M
 tz.py,7/f/7faff1fa16f8cce0c2b2d2cded4369382fa2d51a
 9
 	README.md,8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
-C
-dashboard/manage.py,9/9/99371256fa9ced976d20f7bc066fa492b5e5a28f
-T
-$dashboard/templates/post_detail.html,e/0/e0dcfbceec18a50250af661c26bfdf46365beb74
-T
-$dashboard/templates/post_update.html,c/f/cf388260c59a4b0c84655cf66fa3e7fb963f3ec2
-D
-dashboard/db.sqlite3,5/1/510e61565a1b5613dbcf301521129a957ba36be7
-O
-dashboard/static/css/styles.css,6/6/66ceaf59f4d66b4fc69fe2812304f9aed5aaf242
 G
 Magic-Dashboard/main.py,f/e/fefa1251a346cc77e7f3d4278ddd88a8d66a4df1
 K
 dashboard/dashboard/wsgi.py,0/b/0bf18a3b9ceb8b099ed00809752d3ff9a7252978
 W
 'dashboard/templates/comment_update.html,f/8/f87143ede6c3365ccafec001d804bc97fc7e0b6f
-O
-dashboard/dashboard/settings.py,e/2/e24027b50938682d3a66fbaf0594ca376874ba7a
-I
-dashboard/board/models.py,1/9/19c617b9c2813b96fd43d80121c47d2c3990b702
-P
- dashboard/templates/profile.html,f/b/fbab84615c3475430b271a70d4d3cedec7d13c13
-X
-(dashboard/templates/flatpages/index.html,7/7/7746e905486b394934fff2a5c67cbe6564969454
-U
-%dashboard/templates/account/base.html,8/b/8bbf173c1944e263f5ce18b3cb6fe1c5b659d258
-G
-dashboard/board/urls.py,a/9/a954557cf998186f158b0fb0b11a5a7debb00ab6
-K
-dashboard/dashboard/urls.py,9/c/9cffd5fb07c17573a5e06b42f38449ad09f65912
 H
 dashboard/board/tasks.py,6/5/65c237a2a424243f73ba926a6b3070d7c7935a67
+G
+dashboard/board/apps.py,0/e/0eb90c6c4d9f99f7c8478aa2e6e2681e3906a7a5
+H
+dashboard/board/admin.py,a/b/ab14f159bfcfcbf14db6782f7cabdee7513c8970
+K
+dashboard/dashboard/urls.py,9/c/9cffd5fb07c17573a5e06b42f38449ad09f65912
+G
+dashboard/board/urls.py,a/9/a954557cf998186f158b0fb0b11a5a7debb00ab6
+D
+dashboard/db.sqlite3,5/1/510e61565a1b5613dbcf301521129a957ba36be7
+C
+dashboard/manage.py,9/9/99371256fa9ced976d20f7bc066fa492b5e5a28f
+I
+dashboard/board/models.py,1/9/19c617b9c2813b96fd43d80121c47d2c3990b702
 J
 dashboard/board/signals.py,5/0/50b27d2423295fcce86e50560b96137964912e54
+O
+dashboard/static/css/backup.txt,a/a/aa618abe19b212ae5e64fda5693fb2730a0ddffc

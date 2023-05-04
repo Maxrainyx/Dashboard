@@ -9,7 +9,6 @@ from django.contrib.auth.mixins import LoginRequiredMixin
 from .filters import CommentFilter
 from .models import Post, Comment
 from django.urls import reverse_lazy, reverse
-from django.utils import timezone
 
 from .forms import PostForm, CommentForm
 

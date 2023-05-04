@@ -1,47 +1,20 @@
 {% extends 'flatpages/index.html' %}
 
-
-
 {% block content %}
-
-<style>
-* {
-  box-sizing: border-box;
-}
-.button {
-
-}
-
-input[type=submit] {
-    background-color: #598886; /* Green */
-    border: none;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 12px;
-}
-</style>
 {% if user.id == post.author.id %}
-        <h1>Update section</h1>
-        <hr>
-
-        <form action="" method="post">
-            {% csrf_token %}
-            {{ form.media }}
-            {{ form.as_p }}
-
-            <input type="submit" value="Let's go" />
-
-        </form>
-
-    {% else %}
-
-    <h1>Sorry, you're not the author </h1>
+    <h1 class="comment-heading">
+        Update section
+    </h1>
+    <hr>
+    <form class="comment-heading" action="" method="post">
+        {% csrf_token %}
+        {{ form.media }}
+        {{ form.as_p }}
+        <input class="button-edit" type="submit" value="Let's go" />
+    </form>
+{% else %}
+    <h1 class="comment-heading">
+        Sorry, you're not the author :(
+    </h1>
 {% endif %}
-
 {% endblock content %}

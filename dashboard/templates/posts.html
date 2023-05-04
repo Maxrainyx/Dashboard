@@ -1,141 +1,46 @@
 {% extends 'flatpages/index.html' %}
 
-
 {% block content %}
-<!--  overwrite some styles for the better experience -->
-<style>
-* {
-  box-sizing: border-box;
-}
-
-.row {
-  display: flex;
- }
- .container-name {
-  border: 2px solid #C2CACA;
-  background-color: #738AA7;
-  border-radius: 12px;
-  text-align: center;
-  padding: 10px;
-  margin: 10px 0;
-  width: 25%;
-  float: right;
-
-}
-
-.container-com {
-  border: 2px solid #C6CECE;
-  background-color: #C2CACA;
-  border-radius: 5px;
-  height: 300px;
-  padding: 10px;
-  margin: 10px 0;
-}
-
-.container-post {
-  border-radius: 5px;
-  height: 165px;
-  padding: 10px;
-}
-
-.pagination {
-  display: inline-block;
-}
-
-.pagination a {
-  color: black;
-  padding: 8px 16px;
-  text-decoration: none;
-}
-
-.pagination a.active {
-  background-color: #598886;
-  color: white;
-  border-radius: 5px;
-}
-
-.pagination a:hover:not(.active) {
-  background-color: #ddd;
-  border-radius: 5px;
-}
-
-.button {
-    background-color: #94945C;
-    border: none;
-    color: white;
-    padding: 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border-radius: 12px;
-    float: right;
-}
-</style>
-
-
+<h2 class="comment-heading">
+    All articles
+</h2>
 {% for post in posts %}
-
-<div class="row"> <!--  container for a post  -->
-    <div class="container-com">
-    <h3>{{ post.title }}</h3>
-        <div class="container-post">
-            <a>{{ post.text|truncatechars:999 }}</a>
+<!--  container for a post  -->
+    <div class="post-main shadow-post dotted">
+        <h2 class="title">
+            {{ post.title }}
+        </h2>
+        <div class="author-cat">
+            {% if user.id == post.author.id %}
+                <strong> By <i  style="color:white;">{{ post.author }} </i></strong>
+            {% else %}
+                <strong> By <i>{{ post.author }} </i></strong>
+            {% endif %}
+            <strong>| Category - <i>{{ post.category }} </i> |  {{ post.created|date:'d M Y' }}</strong>
         </div>
-    <form action="/news/{{ post.id }}" method="">
-        <button class="button">  Full version  </button>
-    </form>
-
-        {% if user.id == post.author.id %}
-
-            <div class="container-name" style="float:left;background-color: #598886;">
-                <strong> By <i>{{ post.author }} </i></strong>
-            </div>
-
-        {% else %}
-
-            <div class="container-name" style="float:left;">
-                <strong> By <i>{{ post.author }} </i></strong>
-            </div>
-
-        {% endif %}
-
-
-
-
-        <div class="container-name" style="float:left;">
-           <strong> Category - <i>{{ post.category }} </i></strong>
+        <div class="post-text">
+            {{ post.text|truncatechars:999|safe }}
+            <form action="/news/{{ post.id }}" method="">
+                <button class="button-new">  Full version  </button>
+            </form>
         </div>
     </div>
-
-</div>
-
 {% endfor %}
 
-<div class="pagination">
-
+<div style="text-align: center;">
     {% if page_obj.has_previous %} <!--  if object has previous page  -->
-        <a href="?page=1" >1</a>
-
+        <a class="shadow-pagination dotted" href="?page=1" >1</a>
         {% if page_obj.previous_page_number != 1 %}
-            <a href="?page={{ page_obj.previous_page_number }}">{{ page_obj.previous_page_number }}</a>
+            <a class="shadow-pagination dotted" href="?page={{ page_obj.previous_page_number }}">{{ page_obj.previous_page_number }}</a>
         {% endif %}
-
     {% endif %}
-
-    <a href="?page=1" class="active">{{ page_obj.number }} </a>
-
+    <a class="shadow-pagination dotted" href="?page=1">{{ page_obj.number }} </a>
     {% if page_obj.has_next %} <!--  if object has next page  -->
-        <a href="?page={{ page_obj.next_page_number }}">{{ page_obj.next_page_number }}</a>
-
+        <a class="shadow-pagination dotted" href="?page={{ page_obj.next_page_number }}">{{ page_obj.next_page_number }}</a>
         {% if paginator.num_pages != page_obj.next_page_number %}
-            <a href="?page={{ page_obj.paginator.num_pages }}">{{ page_obj.paginator.num_pages }}</a>
+            <a class="shadow-pagination dotted" href="?page={{ page_obj.paginator.num_pages }}">{{ page_obj.paginator.num_pages }}</a>
         {% endif %}
-
     {% endif %}
-
 </div>
 
 {% endblock content %}

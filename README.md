@@ -32,10 +32,14 @@
 <hr>
 <h3>Settings included:</h3>
   - to send messages to console instead of actual email
+
+```
    <p>if DEBUG:</p>
    <p>    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'</p>
   - to debug the project
    <p>DEBUG = True</p>
+```
+
 <hr>
 <h3>Dashboard requares:</h3>
   <p>django</p>

@@ -6,7 +6,7 @@
 <ul>
     <li>sign and log in,</li>
     <li>to proceed signing in you will receive confirmation email,</li>
-    <li>create post( + attach images and embed videos) if you're logged in,</li>
+    <li>create post (+attach images and embed videos) if you're logged in,</li>
     <li>edit or delete posts if you're the author of it,</li>
     <li>create comments for the post, they have to be approved by its author to be availible,</li>
     <li>there will be an email-notification for this action,</li>
@@ -34,7 +34,7 @@
 <hr>
 <h3>Settings included:</h3>
 
-> to send messages to console instead of actual email:
+> to send messages within the console (instead of actual email):
 
 ```
 if DEBUG:

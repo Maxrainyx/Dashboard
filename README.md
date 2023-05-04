@@ -20,11 +20,11 @@
 
 <img width="800" src="https://user-images.githubusercontent.com/115626270/236312844-ebf7844c-4549-41e1-a553-5328ecb86d40.png">
 
-> detailed posts with commentaries
+> detailed post with commentaries
 
 <img width="800" src="https://user-images.githubusercontent.com/115626270/236312901-d29b6988-937b-486e-87cd-e39a2d83e365.png">
 
-> profile page with approval section
+> profile page with an approval section
 
 <img width="800" src="https://user-images.githubusercontent.com/115626270/236312770-7f58fd03-966a-44ad-83df-4fd97aa43585.png">
 </p>
@@ -54,7 +54,14 @@ DEBUG = True
   <li>django-filter</li>
   <li>celery</li>
   <li>redis</li>
+  <li>requests</>
 </ul>
+
+> You can use command below
+ 
+```
+pip3 install -r requirements.txt
+```
 
 <hr>
 

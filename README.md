@@ -105,7 +105,7 @@ pip3 install -r requirements.txt
 python3 manage.py runserver
 ```
 
-> now you can visit project page <a href="http://127.0.0.1:8000/">here</a>
+> now, if everything is OK, you can visit project page <a href="http://127.0.0.1:8000/">here</a>
 
 <hr>
 <h3>Problems TODO: </h3>

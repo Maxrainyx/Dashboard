@@ -64,7 +64,7 @@ DEBUG = True
   To start:
 </h2>
 <p>
-  Get and open project in your IDE.
+  Get and open the project in your IDE.
   Run commands below in your terminal:
 </p>
 

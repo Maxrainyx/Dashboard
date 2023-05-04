@@ -4,3 +4,5 @@ Magic-Dashboard/.idea
 .DS_Store
 .idea
 __pycache__
+dashboard/__pycache__
+board/__pycache__

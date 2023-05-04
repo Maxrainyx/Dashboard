@@ -81,27 +81,11 @@ pip3 install -r requirements.txt
 python3 -m venv venv
 ```
 
-<p>
-  then
-</p>
-
 ```
 source venv/bin/activate
 ```
 
 > to install requirentments:
-
-<p>
-  then
-</p>
-
-```
-сd dashboard
-```
- 
-<p>
-  then
-</p>
 
 ```
 pip3 install -r requirements.txt
@@ -113,6 +97,10 @@ pip3 install -r requirements.txt
 
 > to run the server:
 
+```
+сd dashboard
+```
+ 
 ```
 python3 manage.py runserver
 ```

@@ -30,8 +30,6 @@
   <p>redis</p>
   <hr>
 <h3>Problems TODO: </h3>
-<p>move css from templates</p>
 <p>edit sigh in and out pages</p>
 <p>split emails to one on creation and another on editing (approval) of the comment</p>
 <p>get rid of emails from auto approval of your comments to your own posts (?)</p>
-<p>get rid of unused bootstrap css (?)</p>

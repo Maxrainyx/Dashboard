@@ -41,18 +41,20 @@ if DEBUG:
  - to debug the project
 
 ```
-    DEBUG = True</p>
+DEBUG = True
 ```
 
 <hr>
 <h3>Dashboard requares:</h3>
-  <p>django</p>
-  <p>django-allauth</p>
-  <p>django-ckeditor</p>
-  <p>django-filter</p>
-  <p>celery</p>
-  <p>redis</p>
-  <hr>
+<ul>
+  <li>django</li>
+  <li>django-allauth</li>
+  <li>django-ckeditor</li>
+  <li>django-filter</li>
+  <li>celery</li>
+  <li>redis</li>
+<ul>
+<hr>
 <h3>Problems TODO: </h3>
 <p>edit sigh in and out pages</p>
 <p>split emails to one on creation and another on editing (approval) of the comment</p>

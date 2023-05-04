@@ -10,7 +10,7 @@
     <li>edit or delete posts if you're the author of it,</li>
     <li>create comments for the post, they have to be approved by its author to be availible,</li>
     <li>there will be an email-notification for this action,</li>
-    <li>if you're the post author your comments will be immediately shown without your own approval,</li>
+    <li>if you're the author of the post, your comments will be immediately shown without your own approval,</li>
     <li>you can see all the unapproved comments from other users to your posts on your profile page. </li>
     <li>there you can filter them by the title, approve or delete them, also you can see the title of these posts and go to the full version,</li>
     <li>there will be weekly mail delivery on Monday 10 A.M. with all posts for the previous week to all signed in users</li>

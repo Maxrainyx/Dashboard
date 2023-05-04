@@ -23,7 +23,7 @@ main page with all the posts
 <img width="800" src="https://user-images.githubusercontent.com/115626270/236312844-ebf7844c-4549-41e1-a553-5328ecb86d40.png">
 
 > detailed posts with commentaries
-<p>
+
 <img width="800" src="https://user-images.githubusercontent.com/115626270/236312901-d29b6988-937b-486e-87cd-e39a2d83e365.png">
 </p>
 > profile page with approval section

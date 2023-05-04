@@ -48,11 +48,11 @@ DEBUG = True
 <hr>
 <h3>Dashboard requares:</h3>
 <ul>
+  <li>celery</li>
   <li>django</li>
   <li>django-allauth</li>
   <li>django-ckeditor</li>
   <li>django-filter</li>
-  <li>celery</li>
   <li>redis</li>
   <li>requests</>
 </ul>

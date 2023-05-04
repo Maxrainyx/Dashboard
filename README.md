@@ -68,20 +68,58 @@ pip3 install -r requirements.txt
 <hr>
 
 <h2>
-  Для запуска:
+  To start:
 </h2>
 <p>
-  Откройте проект в IDE.
-  В терминале введите:
+  Get and open project in your IDE.
+  Run commands below in your terminal:
 </p>
-​
+
+> to create and activate virtual environtment:
+
+```
+python3 -m venv venv
+```
+
+<p>
+  then
+</p>
+
+```
+source venv/bin/activate
+```
+
+> to install requirentments:
+
+<p>
+  then
+</p>
+
+```
+сd dashboard
+```
+ 
+<p>
+  then
+</p>
 
 ```
 pip3 install -r requirements.txt
 ```
 
-> установятся необходимые библиотеки из файла requirements.txt
+<p>
+  and finally
+</p>
 
+> to run the server:
+
+```
+python3 manage.py runserver
+```
+
+> now you can visit project page <a href="http://127.0.0.1:8000/">here</a>
+
+<hr>
 <h3>Problems TODO: </h3>
 <ul>
     <li>edit sigh in and out pages</li>

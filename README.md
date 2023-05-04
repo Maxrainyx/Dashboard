@@ -65,7 +65,7 @@ DEBUG = True
 </h2>
 <p>
   Get and open the project in your IDE.
-  Run commands below in your terminal:
+  Copy-paste commands below into your terminal:
 </p>
 
 > to create and activate virtual environtment:

@@ -34,10 +34,14 @@
   - to send messages to console instead of actual email
 
 ```
-   <p>if DEBUG:</p>
-   <p>    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'</p>
-  - to debug the project
-   <p>DEBUG = True</p>
+if DEBUG:
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'</p>
+```
+
+ - to debug the project
+
+```
+    DEBUG = True</p>
 ```
 
 <hr>

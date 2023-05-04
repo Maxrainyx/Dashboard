@@ -1,16 +1,13 @@
 {% extends 'flatpages/index.html' %}
 {% block content %}
 
-
-
 <h2 class="comment-heading">
     Hi, {{ user }}! Welcome!
 </h2>
 <hr>
 <h3 class="comment-heading">
-        You can approve or reject these comments
-    </h3>
-
+    You can approve or reject these comments
+</h3>
 <h5 class="comment-heading" style="color:red;">
     - Apply this filter below if you need to -
 </h5>
@@ -20,9 +17,7 @@
     </form>
     <input form="filter" class="button-center boom" type="submit" value="Booom" />
 </div>
-
 {% for comment in coms %}
-
     {% if comment.author_id != user.id and not comment.approved %}
         <div class="shadow-comment dotted comment-profile">
             <h4 class="title">

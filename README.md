@@ -53,8 +53,10 @@ DEBUG = True
   <li>django-filter</li>
   <li>celery</li>
   <li>redis</li>
-<ul>
+</ul>
+
 <hr>
+
 <h3>Problems TODO: </h3>
 <p>edit sigh in and out pages</p>
 <p>split emails to one on creation and another on editing (approval) of the comment</p>

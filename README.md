@@ -58,6 +58,9 @@ DEBUG = True
 <hr>
 
 <h3>Problems TODO: </h3>
-<p>edit sigh in and out pages</p>
-<p>split emails to one on creation and another on editing (approval) of the comment</p>
-<p>get rid of emails from auto approval of your comments to your own posts (?)</p>
+
+<ul>
+    <li>edit sigh in and out pages</li>
+    <li>split emails to one on creation and another on editing (approval) of the comment</li>
+    <li>get rid of emails from auto approval of your comments to your own posts (?)</li>
+</ul>

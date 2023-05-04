@@ -38,7 +38,7 @@
 
 ```
 if DEBUG:
-    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'</p>
+    EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 ```
 
 > to debug the project:

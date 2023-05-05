@@ -1,6 +1,6 @@
 # Dashboard
 
- Retro-dashboard for the fun service of the MMORPG game.
+ Retro-dashboard for the fan service of the MMORPG game.
 
 <h3>You can:</h3>
 <ul>

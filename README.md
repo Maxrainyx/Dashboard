@@ -4,16 +4,16 @@
 
 <h3>You can:</h3>
 <ul>
-    <li>sign and log in,</li>
-    <li>to proceed signing in you will receive confirmation email,</li>
-    <li>create post (+attach images and embed videos) if you're logged in,</li>
-    <li>edit or delete posts if you're the author of it,</li>
-    <li>create comments for the post, they have to be approved by its author to be availible,</li>
-    <li>there will be an email-notification for this action,</li>
-    <li>if you're the author of the post, your comments will be immediately shown without your own approval,</li>
-    <li>you can see all the unapproved comments from other users to your posts on your profile page. </li>
-    <li>there you can filter them by the title, approve or delete them, also you can see the title of these posts and go to the full version,</li>
-    <li>there will be weekly mail delivery on Monday 10 A.M. with all posts for the previous week to all signed in users</li>
+  <li>Register and log in.</li>
+  <li>To proceed with the sign-in process, you will receive a confirmation email.</li>
+  <li>Once logged in, you can create posts and include images and embedded videos.</li>
+  <li>If you are the author of a post, you can edit or delete it.</li>
+  <li>Comments can be created for posts, but they require approval from the post's author to be visible.</li>
+  <li>An email notification will be sent for comment approvals.</li>
+  <li>If you are the author of a post, your comments will be immediately displayed without needing your own approval.</li>
+  <li>On your profile page, you can view all unapproved comments made by other users on your posts.</li>
+  <li>On the profile page, you can filter comments by title, approve or delete them, and view the titles of the corresponding posts.</li>
+  <li>Additionally, there will be a weekly email delivery every Monday at 10 A.M., containing all posts from the previous week, sent to all registered users.</li>
 </ul>
 <hr>
 <h3>Some screenshots:</h3>
